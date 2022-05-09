@@ -1,0 +1,28 @@
+{
+  "name": "@afeefa/visualisierung-statistik-rechte-gewalt",
+  "version": "1.0.0",
+  "author": "Afeefa Kollektiv",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeefacode/visualisierung-statistik-rechte-gewalt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/afeefacode/visualisierung-statistik-rechte-gewalt/issues"
+  },
+  "homepage": "https://github.com/afeefacode/visualisierung-statistik-rechte-gewalt#readme",
+  "description": "Visualisierung Statistik rechter Gewalttaten",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "vite": "^2.9.7"
+  }
+}

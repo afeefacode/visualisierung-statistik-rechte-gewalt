@@ -12,7 +12,6 @@
   },
   "homepage": "https://github.com/afeefacode/visualisierung-statistik-rechte-gewalt#readme",
   "description": "Visualisierung Statistik rechter Gewalttaten",
-  "main": "index.js",
   "scripts": {
     "dev": "npm run --prefix node_modules/@afeefa/vue2-bootstrap serve",
     "build": "npm run --prefix node_modules/@afeefa/vue2-bootstrap build-lib"

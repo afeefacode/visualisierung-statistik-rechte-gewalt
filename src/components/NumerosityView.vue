@@ -12,7 +12,7 @@
             {{ currentSet[type].groupings[0].groups[0].value }} {{ currentSet[type].groupings[0].groups[0].label }}
             <span
               v-if="!fullscreen"
-            >im Jahr 2020</span>
+            >im Jahr 2021</span>
           </p>
 
           <svg :ref="type" v-bind:style="{ 'height': svgHeight }">

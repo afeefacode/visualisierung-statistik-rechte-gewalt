@@ -1,113 +1,74 @@
 <template>
-  <div :class="{'RAAStatsViz':true, 'fullscreen':(fullscreen), 'mobile': (isMobile)}">
-    <button
-      v-if="!fullscreen"
-      class="teaserButton"
-      @click="goFullscreen(true)"
-    >
-      Statistik erkunden
-    </button>
+  <div v-bind:class="{'RAAStatsViz':true, 'fullscreen':(fullscreen), 'mobile': (isMobile)}">
+    <button class="teaserButton" @click="goFullscreen(true)" v-if="!fullscreen">Statistik erkunden</button>
 
-    <div
-      v-if="fullscreen"
-      class="header"
-    >
-      <h2
-        v-if="isMobile"
-        class="headline"
-      >
-        Rechte Gewalt in Sachsen
-      </h2>
+    <div class="header" v-if="fullscreen">
+      <h2 v-if="isMobile" class="headline">Rechte Gewalt in Sachsen</h2>
 
       <div
         v-if="!isMobile"
-        :class="{'viewControl':true, 'hidden':(!mobileMenuActive)}"
+        v-bind:class="{'viewControl':true, 'hidden':(!mobileMenuActive)}"
         @click="showMobileMenu(false)"
       >
-        <p class="label">
-          Rechte Gewalt in Sachsen
-        </p>
+        <p class="label">Rechte Gewalt in Sachsen</p>
         <span
-          :class="{'active': (numerosityIsActive)}"
+          v-bind:class="{'active': (numerosityIsActive)}"
           @click="switchView('numerosity')"
         >Angriffe & Betroffene</span>
-        <span
-          :class="{'active': (streamIsActive)}"
-          @click="switchView('steam')"
-        >Entwicklung</span>
+        <span v-bind:class="{'active': (streamIsActive)}" @click="switchView('steam')">Entwicklung</span>
       </div>
 
       <span
-        v-if="isMobile && !mobileMenuActive"
         class="mobileMenuButton"
+        v-if="isMobile && !mobileMenuActive"
         @click="showMobileMenu(true)"
       >{{ numerosityIsActive ? 'Jahr ' + selectedYear : selectedGrouping }}</span>
 
       <div
+        v-bind:class="{'viewControl':true, 'hidden':(!mobileMenuActive)}"
         v-if="numerosityIsActive"
-        :class="{'viewControl':true, 'hidden':(!mobileMenuActive)}"
         @click="showMobileMenu(false)"
       >
-        <p class="label">
-          Jahr wählen
-        </p>
+        <p class="label">Jahr wählen</p>
         <span
+          v-bind:class="{'active': (set.year == selectedYear)}"
           v-for="set in sets"
           :key="set.year"
-          :class="{'active': (set.year == selectedYear)}"
           @click="selectedYear = set.year"
         >{{ set.year }}</span>
       </div>
 
-      <div
-        v-if="streamIsActive"
-        class="viewControl"
-        @click="showMobileMenu(false)"
-      >
-        <p class="label">
-          Aufschlüsseln nach
-        </p>
+      <div class="viewControl" v-if="streamIsActive" @click="showMobileMenu(false)">
+        <p class="label">Aufschlüsseln nach</p>
         <span
-          :class="{'active': (selectedGrouping == 'Motiv')}"
+          v-bind:class="{'active': (selectedGrouping == 'Motiv')}"
           @click="selectedGrouping = 'Motiv'"
         >Motiv</span>
 
         <span
-          :class="{'active': (selectedGrouping == 'Region')}"
+          v-bind:class="{'active': (selectedGrouping == 'Region')}"
           @click="selectedGrouping = 'Region'"
         >Region</span>
       </div>
 
-      <span
-        v-if="!isMobile"
-        class="active right closeBtn"
-        @click="goFullscreen(false)"
-      >✖</span>
+      <span v-if="!isMobile" class="active right closeBtn" @click="goFullscreen(false)">✖</span>
     </div>
 
-    <numerosity-view
-      v-if="numerosityIsActive"
-      v-bind="propsToPass"
-    />
-    <stream-view
-      v-if="streamIsActive"
-      v-bind="propsToPass"
-    />
+    <numerosity-view v-bind="propsToPass" v-if="numerosityIsActive" />
+    <stream-view v-bind="propsToPass" v-if="streamIsActive" />
 
     <p
       v-if="fullscreen && isMobile"
       class="closeBtn"
       style="text-align: center; padding: 1em; border-top: 1px solid black;"
       @click="goFullscreen(false)"
-    >
-      ✖
-    </p>
+    >✖</p>
   </div>
 </template>
 
 <script>
 import { Component, Vue } from 'vue-property-decorator'
-import * as statsData from '../../data/raa-stats.json'
+import * as statsData from '../data/raa-stats.json'
 import 'core-js'
 import KolleDeviceDetector from '@/helpers/kolle-device-detector'
 
@@ -190,7 +151,8 @@ class RAAStatsViz extends Vue {
     if (bool) {
       bodyClasses.add('noscroll')
       window.location.hash = '#tool'
-    } else {
+    }
+    else {
       bodyClasses.remove('noscroll')
       window.location.hash = ''
       this.switchView('numerosity')
@@ -265,15 +227,15 @@ class RAAStatsViz extends Vue {
   }
 
   ::v-deep .viewControl {
-    border-bottom: 2px dotted #AAAAAA;
+    border-bottom: 2px dotted #aaaaaa;
     display: inline-block;
     justify-self: start;
 
     > * {
       display: inline-block;
-      margin: 0 .5em;
+      margin: 0 0.5em;
       cursor: pointer;
-      font-size: .8rem;
+      font-size: 0.8rem;
 
       &.active {
         font-weight: bold;
@@ -282,9 +244,9 @@ class RAAStatsViz extends Vue {
 
       &.label {
         display: block;
-        font-size: .7em;
+        font-size: 0.7em;
         cursor: unset;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
       }
     }
   }
@@ -329,31 +291,31 @@ class RAAStatsViz extends Vue {
 
   .attacks {
     .subHeadline {
-      color: #F67878;
+      color: #f67878;
     }
 
     circle {
-      fill: #F67878;
+      fill: #f67878;
     }
 
     text {
-      fill: #F67878;
-      font-size: .7rem;
+      fill: #f67878;
+      font-size: 0.7rem;
     }
   }
 
   .victims {
     .subHeadline {
-      color: #8FC3A7;
+      color: #8fc3a7;
     }
 
     circle {
-      fill: #8FC3A7;
+      fill: #8fc3a7;
     }
 
     text {
-      fill: #8FC3A7;
-      font-size: .7rem;
+      fill: #8fc3a7;
+      font-size: 0.7rem;
     }
   }
 
@@ -369,13 +331,13 @@ class RAAStatsViz extends Vue {
       .headline {
         order: -1;
         align-self: center;
-        margin-bottom: .3em;
+        margin-bottom: 0.3em;
       }
 
       .mobileMenuButton {
         align-self: center;
         font-style: italic;
-        border-bottom: 2px dotted #AAAAAA;
+        border-bottom: 2px dotted #aaaaaa;
         font-weight: bold;
       }
 

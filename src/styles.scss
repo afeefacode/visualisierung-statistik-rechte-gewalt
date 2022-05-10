@@ -1,0 +1,15 @@
+.device-indicator {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+}
+
+.device-indicator::before {
+  content: "desktop";
+}
+
+@media (max-width: 1023px) {
+  .device-indicator::before {
+    content: "mobile";
+  }
+}

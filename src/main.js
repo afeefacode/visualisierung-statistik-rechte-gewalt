@@ -5,6 +5,7 @@ import RAAStatsViz from './components/RAAStatsViz'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faShare, faShareAlt, faShareAltSquare } from '@fortawesome/free-solid-svg-icons'
+import './styles.scss'
 
 library.add(faShare)
 library.add(faShareAlt)

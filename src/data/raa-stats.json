@@ -1,5 +1,196 @@
 [
   {
+    "year": 2021,
+    "attacks": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Angriffe",
+              "value": 189
+            }
+          ]
+        },
+        {
+          "label": "Motiv",
+          "groups": [
+            {
+              "label": "Rassismus",
+              "value": 88
+            },
+            {
+              "label": "Gegen Nichtrechte und Alternative",
+              "value": 26
+            },
+            {
+              "label": "Wegen sexueller Orientierung",
+              "value": 8
+            },
+            {
+              "label": "Gegen politische Gegner",
+              "value": 53
+            },
+            {
+              "label": "Sozialdarwinismus (gegen Wohnungslose)",
+              "value": 0
+            },
+            {
+              "label": "Sozialdarwinismus (Gegen Menschen mit Behinderung)",
+              "value": 4
+            },
+            {
+              "label": "Antisemitismus",
+              "value": 4
+            },
+            {
+              "label": "Unklar",
+              "value": 5
+            },
+            {
+              "label": "Sonstiges",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "label": "Tatbestand",
+          "groups": [
+            {
+              "label": "Körperverletzung",
+              "value": 145
+            },
+            {
+              "label": "Nötigung/ Bedrohnung",
+              "value": 37
+            },
+            {
+              "label": "Brandstiftung",
+              "value": 3
+            },
+            {
+              "label": "Massive Sachbeschädigung",
+              "value": 2
+            },
+            {
+              "label": "Sonstige Gewalttaten",
+              "value": 2,
+              "info": "z.B. Raub, Landfriedensbruch"
+            }
+          ]
+        },
+        {
+          "label": "Region",
+          "groups": [
+            {
+              "label": "Stadt Leipzig",
+              "value": 46
+            },
+            {
+              "label": "LK Nordsachsen",
+              "value": 12
+            },
+            {
+              "label": "LK Leipzig",
+              "value": 13
+            },
+            {
+              "label": "LK Mittelsachsen",
+              "value": 1
+            },
+            {
+              "label": "Stadt Chemnitz",
+              "value": 16
+            },
+            {
+              "label": "LK Zwickau",
+              "value": 13
+            },
+            {
+              "label": "Erzgebirgskreis",
+              "value": 7
+            },
+            {
+              "label": "Vogtlandkreis",
+              "value": 6
+            },
+            {
+              "label": "Stadt Dresden",
+              "value": 49
+            },
+            {
+              "label": "LK Meißen",
+              "value": 6
+            },
+            {
+              "label": "LK SSW / OE",
+              "value": 9
+            },
+            {
+              "label": "LK Bautzen",
+              "value": 8
+            },
+            {
+              "label": "LK Görlitz",
+              "value": 3
+            }
+          ]
+        }
+      ]
+    },
+    "victims": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Betroffene",
+              "value": 261
+            }
+          ]
+        },
+        {
+          "label": "Geschlecht",
+          "groups": [
+            {
+              "label": "Männer",
+              "value": 133
+            },
+            {
+              "label": "Frauen",
+              "value": 40
+            },
+            {
+              "label": "Unbekannt",
+              "value": 86
+            }
+          ]
+        },
+        {
+          "label": "Alter",
+          "groups": [
+            {
+              "label": "Erwachsene",
+              "value": 144
+            },
+            {
+              "label": "Jugendlich (14-18)",
+              "value": 34
+            },
+            {
+              "label": "Kind (0-13)",
+              "value": 18
+            },
+            {
+              "label": "Unbekannt",
+              "value": 65
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "year": 2020,
     "attacks": {
       "groupings": [

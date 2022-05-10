@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Visualisierung Statistik rechte Gewalt</title>
+    <script src="vue.min.js"></script>
+    <script src="visualisierung-statistik.js"></script>
+    <link rel="stylesheet" type="text/css" href="visualisierung-statistik.css">
+  </head>
+
+  <body>
+    <div id="statsViz" class="statsVizContainer">
+      <raa-stats-viz></raa-stats-viz>
+    </div>
+  </body>
+
+  <script>
+  window.addEventListener('load', function() {
+    console.log('load', window)
+    new Vue({
+      el: document.getElementById('statsViz')
+    })
+  }, false);
+  </script>
+</html>

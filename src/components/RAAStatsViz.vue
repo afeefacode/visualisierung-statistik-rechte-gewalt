@@ -1,5 +1,6 @@
 <template>
   <div v-bind:class="{'RAAStatsViz':true, 'fullscreen':(fullscreen), 'mobile': (isMobile)}">
+    <!-- <h3>var: {{ stats_data }}</h3> -->
     <button class="teaserButton" @click="goFullscreen(true)" v-if="!fullscreen">Statistik erkunden</button>
 
     <div class="header" v-if="fullscreen">
@@ -77,6 +78,7 @@ import StreamView from './StreamView'
 
 export default
 @Component({
+  props: ['stats_data'],
   components: {
     NumerosityView,
     StreamView

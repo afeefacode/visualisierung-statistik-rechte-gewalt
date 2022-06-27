@@ -58,3 +58,5 @@ define('VISUALISIERUNG_DEV', false); <-- set to true
 define('VISUALISIERUNG_DEV_PORT', 8081); <-- set to port from npm run dev
 
 ```
+
+Enabling debug mode in wordpress docker instance

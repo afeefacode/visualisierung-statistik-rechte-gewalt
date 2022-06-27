@@ -11,6 +11,9 @@ services:
       WORDPRESS_DB_USER: exampleuser
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
+      WP_DEBUG: "true"
+      WP_DEBUG_DISPLAY: "true"
+      WP_DEBUG_LOG: "true"
     volumes:
       - wordpress:/var/www/html
       - ../wp-plugin/visualisierung-statistik:/var/www/html/wp-content/plugins/visualisierung-statistik

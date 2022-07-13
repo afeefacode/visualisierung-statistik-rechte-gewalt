@@ -20,7 +20,7 @@ function inject_statsviz($content)
 
     $vueCode .= <<<EOF
         <div id="statsViz" class="statsVizContainer">
-            <raa-stats-viz></raa-stats-viz>
+            <raa-stats-viz teaser-button-color="#f0861b" fullscreen-margin-top="0"></raa-stats-viz>
         </div>
         <script>
             window.addEventListener('load', function() {

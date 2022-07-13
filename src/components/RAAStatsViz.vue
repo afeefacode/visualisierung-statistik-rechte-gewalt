@@ -1,32 +1,26 @@
 <template>
-  <div v-bind:class="{'RAAStatsViz':true, 'fullscreen':(fullscreen), 'mobile': (isMobile)}">
-    <!-- <h3>var: {{ stats_data }}</h3> -->
-    <button class="teaserButton" @click="goFullscreen(true)" v-if="!fullscreen">Statistik erkunden</button>
-
+  <div
+    v-bind:class="{'RAAStatsViz':true, 'fullscreen':(fullscreen), 'mobile': (isMobile)}"
+    :style="{'top': (fullscreen && !isMobile) ? fullscreenMarginTop : null, 'height': (fullscreen && !isMobile) ? `calc(100vh - ${fullscreenMarginTop})` : null}"
+  >
     <div class="header" v-if="fullscreen">
-      <h2 v-if="isMobile" class="headline">Rechte Gewalt in Sachsen</h2>
+      <h2 v-if="isMobile" class="headline">Vorfälle rechter Gewalt in Niedersachsen</h2>
 
       <div
         v-if="!isMobile"
-        v-bind:class="{'viewControl':true, 'hidden':(!mobileMenuActive)}"
+        v-bind:class="{'viewControl':true, 'hydden':(!mobileMenuActive)}"
         @click="showMobileMenu(false)"
       >
-        <p class="label">Rechte Gewalt in Sachsen</p>
+        <p class="label">Vorfälle in Niedersachsen</p>
         <span
           v-bind:class="{'active': (numerosityIsActive)}"
           @click="switchView('numerosity')"
         >Angriffe & Betroffene</span>
-        <span v-bind:class="{'active': (streamIsActive)}" @click="switchView('steam')">Entwicklung</span>
+        <span v-if="hasStreamView" v-bind:class="{'active': (streamIsActive)}" @click="switchView('steam')">Entwicklung</span>
       </div>
 
-      <span
-        class="mobileMenuButton"
-        v-if="isMobile && !mobileMenuActive"
-        @click="showMobileMenu(true)"
-      >{{ numerosityIsActive ? 'Jahr ' + selectedYear : selectedGrouping }}</span>
-
       <div
-        v-bind:class="{'viewControl':true, 'hidden':(!mobileMenuActive)}"
+        v-bind:class="{'viewControl':true}"
         v-if="numerosityIsActive"
         @click="showMobileMenu(false)"
       >
@@ -55,8 +49,11 @@
       <span v-if="!isMobile" class="active right closeBtn" @click="goFullscreen(false)">✖</span>
     </div>
 
+
     <numerosity-view v-bind="propsToPass" v-if="numerosityIsActive" />
     <stream-view v-bind="propsToPass" v-if="streamIsActive" />
+
+    <button class="teaserButton" :style="`background-color: ${teaserButtonColor}`" @click="goFullscreen(true)" v-if="!fullscreen">Statistik erkunden</button>
 
     <p
       v-if="fullscreen && isMobile"
@@ -69,7 +66,7 @@
 
 <script>
 import { Component, Vue } from 'vue-property-decorator'
-import * as statsData from '../data/raa-stats.json'
+import * as statsData from '../data/data.json'
 import 'core-js'
 import KolleDeviceDetector from '@/helpers/kolle-device-detector'
 
@@ -78,17 +75,18 @@ import StreamView from './StreamView'
 
 export default
 @Component({
-  props: ['stats_data'],
+  props: ['teaserButtonColor', 'fullscreenMarginTop','hasStreamView'],
   components: {
     NumerosityView,
     StreamView
   }
 })
 class RAAStatsViz extends Vue {
-  baseSize = 1
   fullscreen = false
   isMobile = false
   mobileMenuActive = false
+
+  availableWidth = 0
 
   selectedYear = null
   selectedGrouping = null
@@ -99,7 +97,7 @@ class RAAStatsViz extends Vue {
   get propsToPass () {
     return {
       sets: this.sets,
-      baseSize: this.baseSize,
+      availableWidth: this.availableWidth,
       fullscreen: this.fullscreen,
       isMobile: this.isMobile,
       selectedYear: this.selectedYear,
@@ -109,16 +107,15 @@ class RAAStatsViz extends Vue {
 
   created () {
     this.selectedYear = this.sets[0].year
-    if (!this.selectedGrouping) this.selectedGrouping = 'Motiv'
   }
 
   updated () {
-    this.calculateBaseSize()
+    this.calculateAvailableSpace()
   }
 
   mounted () {
     this.isMobile = KolleDeviceDetector.isMobile()
-    this.calculateBaseSize()
+    this.calculateAvailableSpace()
 
     if (window.location.hash === '#tool') this.goFullscreen(true)
   }
@@ -146,7 +143,7 @@ class RAAStatsViz extends Vue {
   }
 
   goFullscreen (bool) {
-    this.calculateBaseSize()
+    this.calculateAvailableSpace()
     this.fullscreen = bool
 
     const bodyClasses = document.getElementsByTagName('body')[0].classList
@@ -158,11 +155,13 @@ class RAAStatsViz extends Vue {
       bodyClasses.remove('noscroll')
       window.location.hash = ''
       this.switchView('numerosity')
+      // TODO reset numerosityView to first grouping; prop selectedGrouping is not used by numerosityView
+      // this.selectedGrouping = this.sets[0].attacks.groupings[0]
     }
   }
 
   showMobileMenu (bool) {
-    // this.calculateBaseSize()
+    // this.calculateAvailableSpace()
     this.mobileMenuActive = bool
 
     // const bodyClasses = document.getElementsByTagName('body')[0].classList
@@ -170,12 +169,10 @@ class RAAStatsViz extends Vue {
     // else bodyClasses.remove('noscroll')
   }
 
-  calculateBaseSize () {
-    if (this.isMobile) {
-      this.baseSize = this.fullscreen ? Math.floor(this.$el.clientHeight * 0.004) : Math.floor(this.$el.clientHeight * 0.006)
-    } else {
-      this.baseSize = this.fullscreen ? Math.floor(this.$el.clientHeight * 0.008) : Math.floor(this.$el.clientHeight * 0.017)
-    }
+  calculateAvailableSpace () {
+    const computedStyle = getComputedStyle(this.$el)
+    const elementWidth = this.$el.clientWidth
+    this.availableWidth = elementWidth - parseFloat(computedStyle.paddingLeft) - parseFloat(computedStyle.paddingRight)
   }
 }
 </script>
@@ -185,17 +182,17 @@ class RAAStatsViz extends Vue {
   height: 100%;
   width: 100%;
   position: relative;
+  box-sizing: border-box;
 
   &.fullscreen {
     position: fixed;
-    height: calc(100vh - 10rem);
     width: 100vw;
     overflow-y: auto;
 
-    top: 10rem;
+    top: 0;
     right: 0;
     z-index: 999;
-    padding: 0 5rem 2rem;
+    padding: 2rem 5rem;
     background: white;
 
     display: grid;
@@ -263,7 +260,7 @@ class RAAStatsViz extends Vue {
       grid-template-columns: 100%;
       grid-template-rows: auto 1fr auto;
 
-      &.hidden {
+      &.hydden {
         display: none;
       }
 
@@ -279,10 +276,8 @@ class RAAStatsViz extends Vue {
   }
 
   .teaserButton {
-    position: absolute;
     top: 0;
     right: 0;
-    background-color: rgb(239, 123, 31);
     color: white;
   }
 
@@ -322,9 +317,10 @@ class RAAStatsViz extends Vue {
   }
 
   &.mobile {
-    height: 100vh;
-    top: 0;
-    padding: 2rem 2rem;
+    &.fullscreen {
+      height: 100vh;
+      padding: 2rem 3rem 0;
+    }
 
     .header {
       display: flex;
@@ -347,7 +343,7 @@ class RAAStatsViz extends Vue {
         align-self: center;
         padding: 1em 0;
 
-        &.hidden {
+        &.hydden {
           display: none;
         }
       }

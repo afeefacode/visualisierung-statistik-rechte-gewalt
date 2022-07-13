@@ -4,12 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Visualisierung Statistik rechte Gewalt</title>
+    <title>Visualisierung Statistik rechter Gewalt</title>
+    <style>
+      #theRealWorldContainer {
+        margin: 5rem auto;
+        border: 1px dashed lightgray;
+        max-width: 1140px;
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 3fr 2fr;
+      }
+
+      aside {
+        box-shadow: 3px 3px 5px 3px rgba(0,9,11,0.26);
+      }
+    </style>
   </head>
 
   <body>
-    <div id="statsViz" class="statsVizContainer">
-      <raa-stats-viz></raa-stats-viz>
+    <div id="theRealWorldContainer">
+      <div id="statsViz" class="statsVizContainer">
+        <raa-stats-viz teaser-button-color="#f0861b" fullscreen-margin-top="0"></raa-stats-viz>
+      </div>
+      <aside>sidebar</aside>
     </div>
   </body>
 

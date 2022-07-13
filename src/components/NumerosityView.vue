@@ -8,15 +8,19 @@
           v-if="currentSet[type]"
         >
           <p class="subHeadline">
-            <!-- {{ currentGrouping[type].groups[0].value }} {{ currentGrouping[type].groups[0].label }} -->
-            {{ currentSet[type].groupings[0].groups[0].value }} {{ currentSet[type].groupings[0].groups[0].label }}
+            <template v-if="currentGrouping[type].heading">
+              {{ currentGrouping[type].heading }}
+            </template>
+            <template v-else>
+              {{ currentSet[type].groupings[0].groups[0].value }} {{ currentSet[type].groupings[0].groups[0].label }}
+            </template>
             <span
               v-if="!fullscreen"
             >im Jahr 2021</span>
           </p>
 
           <svg :ref="type" v-bind:style="{ 'height': svgHeight }">
-            <g class="groupings" :transform="'translate(' + baseSize + ',' + baseSize + ')'">
+            <g class="groupings" :transform="'translate(' + circleSize + ',' + circleSize + ')'">
               <template v-for="(group, i) in currentGrouping[type].groups">
                 <circle
                   v-for="(n) in group.value"
@@ -28,13 +32,13 @@
 
                 <template v-if="fullscreen && currentGrouping[type].groups.length > 1">
                   <text
-                    :x="settings.entitiesPerRow  * spaceScale * baseSize + 10"
+                    :x="settings.entitiesPerRow  * spaceScale * circleSize + 10"
                     :y="calcGroupPos(type, i) + 5"
                     :key="'label-' + i"
                   >{{ group.label }}</text>
                   <text
                     v-if="fullscreen"
-                    :x="settings.entitiesPerRow  * spaceScale * baseSize + 10"
+                    :x="settings.entitiesPerRow  * spaceScale * circleSize + 10"
                     :y="calcGroupPos(type, i) + 5 + 13"
                     :key="'value-' + i"
                   >{{ group.value }}</text>
@@ -72,7 +76,7 @@ import 'core-js'
 
 export default
 @Component({
-  props: ['sets', 'baseSize', 'fullscreen', 'isMobile', 'selectedYear']
+  props: ['sets', 'availableWidth', 'fullscreen', 'isMobile', 'selectedYear']
 })
 class NumerosityView extends Vue {
   settings = {
@@ -80,6 +84,8 @@ class NumerosityView extends Vue {
     groupGap: 30,
     entities: ['attacks', 'victims']
   }
+
+  circleSize = 0
 
   currentSet = null
   currentGrouping = { attacks: {}, victims: {} }
@@ -108,7 +114,7 @@ class NumerosityView extends Vue {
   }
 
   mounted () {
-    this.draw()
+    // this.draw()
   }
 
   @Watch('selectedYear')
@@ -155,9 +161,19 @@ class NumerosityView extends Vue {
     return sum
   }
 
-  draw () {
-    console.log('draw', this.currentSet)
+  @Watch('availableWidth')
+  calculateCircleSize () {
+    let factor = 0.01
 
+    if (this.fullscreen) {
+        factor *= this.isMobile ? 1 : 0.4
+    }
+
+    this.circleSize = Math.floor(this.availableWidth * 10 * factor) / 10
+  }
+
+  @Watch('circleSize')
+  draw () {
     for (const entity of this.settings.entities) {
       if (!this.currentSet[entity]) return
 
@@ -168,16 +184,16 @@ class NumerosityView extends Vue {
         // .data(this.sets)
         .transition()
         .attr('cx', (d, i, nodeList) => {
-          if (this.fullscreen) {
+          // if (this.fullscreen) {
             return this.calcCirclePos(i, entity, nodeList).x
-          }
-          return this.calcCirclePos(i, entity, nodeList).x + 10 + Math.floor(Math.random() * 20 + 1)
+          // }
+          // return this.calcCirclePos(i, entity, nodeList).x + 10 + Math.floor(Math.random() * 20 + 1)
         })
         .attr('cy', (d, i, nodeList) => {
-          if (this.fullscreen) {
+          // if (this.fullscreen) {
             return this.calcCirclePos(i, entity, nodeList).y
-          }
-          return this.calcCirclePos(i, entity, nodeList).y + 10 + Math.floor(Math.random() * 20 + 1)
+          // }
+          // return this.calcCirclePos(i, entity, nodeList).y + 10 + Math.floor(Math.random() * 20 + 1)
         })
         .duration(() => {
           return this.fullscreen ? 500 : 1000
@@ -186,7 +202,7 @@ class NumerosityView extends Vue {
           return this.fullscreen ? Math.floor(Math.random() * 500 + 10) : Math.floor(Math.random() * 1000 + 10)
         })
         .attr('r', (d, i) => {
-          return this.baseSize
+          return this.circleSize
         })
         .style("fill", (d, i) => { return entity === 'victims' ? this.greenColorScale(Math.ceil(Math.random() * 100)) : null })
 
@@ -234,8 +250,8 @@ class NumerosityView extends Vue {
     const row = Math.floor(nthInGroup / this.settings.entitiesPerRow)
 
     return {
-      x: (nthInGroup % this.settings.entitiesPerRow) * this.spaceScale * this.baseSize,
-      y: row * this.spaceScale * this.baseSize + blockY
+      x: (nthInGroup % this.settings.entitiesPerRow) * this.spaceScale * this.circleSize,
+      y: row * this.spaceScale * this.circleSize + blockY
     }
   }
 
@@ -245,7 +261,7 @@ class NumerosityView extends Vue {
       const rows = Math.ceil(
         this.currentGrouping[type].groups[n].value / this.settings.entitiesPerRow
       )
-      groupSpaceSum += rows * this.baseSize * this.spaceScale
+      groupSpaceSum += rows * this.circleSize * this.spaceScale
     }
 
     return groupSpaceSum + i * this.settings.groupGap
@@ -282,7 +298,7 @@ class NumerosityView extends Vue {
 
   .entities {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     height: 100%;
 
     .entity {
@@ -327,8 +343,13 @@ class NumerosityView extends Vue {
       font-size: 0.7rem;
     }
   }
-  &.fullscreen .attacks {
-    grid-column-end: span 1;
+  &.fullscreen {
+    .entities {
+      grid-template-columns: 1fr 1fr;
+    }
+    .attacks {
+      grid-column-end: span 1;
+    }
   }
 
   .victims {

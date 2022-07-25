@@ -11,12 +11,12 @@
             <template v-if="currentGrouping[type].heading">
               {{ currentGrouping[type].heading }}
             </template>
+            <template v-if="!fullscreen && currentSet.heading">
+              {{ currentSet.heading }}
+            </template>
             <template v-else>
               {{ currentSet[type].groupings[0].groups[0].value }} {{ currentSet[type].groupings[0].groups[0].label }}
             </template>
-            <span
-              v-if="!fullscreen"
-            >im Jahr 2021</span>
           </p>
 
           <svg :ref="type" v-bind:style="{ 'height': svgHeight }">

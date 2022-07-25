@@ -1,5 +1,280 @@
 [
   {
+    "year": "2022/1",
+    "heading": "102 Angriffe im 1. Halbjahr 2022",
+    "attacks": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Angriffe",
+              "value": 102
+            }
+          ]
+        },
+        {
+          "label": "Region Nordwest",
+          "heading": "28 Angriffe in Region Nordwest",
+          "groups": [
+            {
+              "label": "Ammerland",
+              "value": 1
+            },
+            {
+              "label": "Aurich",
+              "value": 1
+            },
+            {
+              "label": "Bentheim",
+              "value": 1
+            },
+            {
+              "label": "Delmenhorst",
+              "value": 1
+            },
+            {
+              "label": "Diepholz",
+              "value": 1
+            },
+            {
+              "label": "Lingen",
+              "value": 1
+            },
+            {
+              "label": "Oldenburg",
+              "value": 8
+            },
+            {
+              "label": "Osnabrück",
+              "value": 12
+            },
+            {
+              "label": "Wilhelmshaven",
+              "value": 1
+            },
+            {
+              "label": "Wittmund",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "label": "Region Nordost",
+          "heading": "45 Angriffe in Region Nordost",
+          "groups": [
+            {
+              "label": "Celle",
+              "value": 5
+            },
+            {
+              "label": "Cuxhaven",
+              "value": 4
+            },
+            {
+              "label": "Hannover",
+              "value": 1
+            },
+            {
+              "label": "Harburg",
+              "value": 3
+            },
+            {
+              "label": "Heidekreis",
+              "value": 3
+            },
+            {
+              "label": "Lüneburg",
+              "value": 5
+            },
+            {
+              "label": "Nienburg",
+              "value": 6
+            },
+            {
+              "label": "Osterholz",
+              "value": 3
+            },
+            {
+              "label": "Rotenburg",
+              "value": 6
+            },
+            {
+              "label": "Schaumburg",
+              "value": 4
+            },
+            {
+              "label": "Stade",
+              "value": 2
+            },
+            {
+              "label": "Uelzen",
+              "value": 1
+            },
+            {
+              "label": "Verden",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "label": "Region Süd",
+          "heading": "29 Angriffe in Region Süd",
+          "groups": [
+            {
+              "label": "Braunschweig",
+              "value": 7
+            },
+            {
+              "label": "Gifhorn",
+              "value": 1
+            },
+            {
+              "label": "Göttingen",
+              "value": 3
+            },
+            {
+              "label": "Hameln-Pyrmont",
+              "value": 1
+            },
+            {
+              "label": "Hannover",
+              "value": 3
+            },
+            {
+              "label": "Hildesheim",
+              "value": 9
+            },
+            {
+              "label": "Northeim",
+              "value": 1
+            },
+            {
+              "label": "Peine",
+              "value": 1
+            },
+            {
+              "label": "Wolfenbüttel",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "label": "Delikte",
+          "groups": [
+            {
+              "label": "Bedrohung",
+              "value": 22
+            },
+            {
+              "label": "Beleidigung",
+              "value": 21
+            },
+            {
+              "label": "Sachbeschädigung",
+              "value": 15
+            },
+            {
+              "label": "Mobbing",
+              "value": 8
+            },
+            {
+              "label": "Racial Profiling",
+              "value": 4
+            },
+            {
+              "label": "Nötigung",
+              "value": 6
+            },
+            {
+              "label": "Volksverhetzung",
+              "value": 7
+            },
+            {
+              "label": "Körperverletzung",
+              "value": 7
+            },
+            {
+              "label": "Gefährliche Körperverletzung",
+              "value": 3,
+              "info": "inkl. Versuche"
+            },
+            {
+              "label": "Sonstige Delikte",
+              "value": 25
+            }
+          ]
+        },
+        {
+          "label": "Motive",
+          "groups": [
+            {
+              "label": "LQBTQIA-Feindlichkeit",
+              "value": 1
+            },
+            {
+              "label": "Verschwörungsideologien",
+              "value": 22
+            },
+            {
+              "label": "Unklar",
+              "value": 2
+            },
+            {
+              "label": "Ukraine Krieg",
+              "value": 1
+            },
+            {
+              "label": "Sozialdarwinismus",
+              "value": 1
+            },
+            {
+              "label": "Rassismus",
+              "value": 36
+            },
+            {
+              "label": "Politische Gegner*innen",
+              "value": 27
+            },
+            {
+              "label": "Nichtrechte",
+              "value": 2
+            },
+            {
+              "label": "Neonazismus",
+              "value": 4
+            },
+            {
+              "label": "Misogynie",
+              "value": 1
+            },
+            {
+              "label": "Antislawismus",
+              "value": 1
+            },
+            {
+              "label": "Antisemitismus",
+              "value": 4
+            }
+          ]
+        }
+      ]
+    },
+    "victims": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Betroffene",
+              "value": 170
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "year": 2021,
     "attacks": {
       "groupings": [

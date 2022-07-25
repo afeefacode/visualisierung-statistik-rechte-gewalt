@@ -22,6 +22,8 @@ cd wp-plugin
 zip -r visualisierung-statistik.zip visualisierung-statistik
 ```
 
+Go to live wordpress and find the plugin, then deactivate and remove it. Finally install the new version by uploading the zip file and activating the plugin. Done.
+
 ## Dev mode wordpress
 
 1. Start vue project

@@ -1,6 +1,6 @@
 <?php
 
-define('VISUALISIERUNG_DEV', true);
+define('VISUALISIERUNG_DEV', false);
 define('VISUALISIERUNG_DEV_PORT', 8081);
 
 /**

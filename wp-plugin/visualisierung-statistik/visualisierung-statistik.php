@@ -14,12 +14,10 @@ function inject_statsviz($content)
     // $data_file_url = plugins_url('./data.json', __FILE__ );
     // $data = file_get_contents($data_file_url);
 
-    $fileName = "stats_data.json";
-    $pluginDirectory = plugin_dir_path( __FILE__ );
+    $fileName = 'stats_data.json';
+    $pluginDirectory = plugin_dir_path(__FILE__);
     $filePath = $pluginDirectory . $fileName;
     $data = file_get_contents($filePath);
-
-    $data = 'test';
 
     if (VISUALISIERUNG_DEV) {
         $VISUALISIERUNG_DEV_PORT = VISUALISIERUNG_DEV_PORT;

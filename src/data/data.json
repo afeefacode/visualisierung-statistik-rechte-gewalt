@@ -1,283 +1,705 @@
 [
-    {
-        "year": 2022,
-        "attacks": {
-            "groupings": [
-                {
-                    "label": "Gesamt",
-                    "groups": [
-                        {
-                            "label": "Angriffe",
-                            "value": 180
-                        }
-                    ]
-                },
-                {
-                    "label": "Tatmotive",
-                    "groups": [
-                        {
-                            "label": "Gegen Nichtrechte und Alternative",
-                            "value": 9
-                        },
-                        {
-                            "label": "Antisemitismus und Mysogenie",
-                            "value": 3
-                        },
-                        {
-                            "label": "Ukraine-Krieg",
-                            "value": 3
-                        },
-                        {
-                            "label": "LGBTQIA-Feindlichkeit",
-                            "value": 5
-                        },
-                        {
-                            "label": "Verschwörungstheorien",
-                            "value": 24
-                        },
-                        {
-                            "label": "Unklar",
-                            "value": 4
-                        },
-                        {
-                            "label": "Sozialdarwinismus",
-                            "value": 4
-                        },
-                        {
-                            "label": "Rassismus",
-                            "value": 69
-                        },
-                        {
-                            "label": "Politische Gegner*innen",
-                            "value": 50
-                        },
-                        {
-                            "label": "Neonazismus",
-                            "value": 4
-                        },
-                        {
-                            "label": "Antislawismus",
-                            "value": 3
-                        },
-                        {
-                            "label": "Antisemitismus",
-                            "value": 9
-                        }
-                    ]
-                },
-                {
-                    "label": "Delikte",
-                    "groups": [
-                        {
-                            "label": "Nötigung/ Bedrohnung",
-                            "value": 68
-                        },
-                        {
-                            "label": "Beleidigung",
-                            "value": 37
-                        },
-                        {
-                            "label": "Sachbeschädigung",
-                            "value": 21
-                        },
-                        {
-                            "label": "Massive Sachbeschädigung",
-                            "value": 3
-                        },
-                        {
-                            "label": "Racial Profiling",
-                            "value": 4
-                        },
-                        {
-                            "label": "Volksverhetzung",
-                            "value": 10
-                        },
-                        {
-                            "label": "Körperverletzung (inkl. Versuche)",
-                            "value": 20
-                        },
-                        {
-                            "label": "Gefährliche Körperverletzung (inkl. Versuche)",
-                            "value": 12
-                        },
-                        {
-                            "label": "Schwere Körperverletzung",
-                            "value": 1
-                        },
-                        {
-                            "label": "Sonstige Delikte",
-                            "value": 45
-                        }
-                    ]
-                },
-                {
-                    "label": "Region Nordwest",
-                    "groups": [
-                        {
-                            "label": "Ammerland",
-                            "value": 1
-                        },
-                        {
-                            "label": "Aurich",
-                            "value": 3
-                        },
-                        {
-                            "label": "Delmenhorst",
-                            "value": 1
-                        },
-                        {
-                            "label": "Diepholz",
-                            "value": 3
-                        },
-                        {
-                            "label": "Lingen",
-                            "value": 1
-                        },
-                        {
-                            "label": "Oldenburg",
-                            "value": 13
-                        },
-                        {
-                            "label": "Osnabrück",
-                            "value": 20
-                        },
-                        {
-                            "label": "Wilhelmshaven",
-                            "value": 2
-                        },
-                        {
-                            "label": "Wittmund",
-                            "value": 2
-                        },
-                        {
-                            "label": "Friesland",
-                            "value": 1
-                        },
-                        {
-                            "label": "Leer",
-                            "value": 2
-                        },
-                        {
-                            "label": "Grafschaft Bentheim",
-                            "value": 1
-                        }
-                    ]
-                },
-                {
-                    "label": "Region Nordost",
-                    "groups": [
-                        {
-                            "label": "Celle",
-                            "value": 7
-                        },
-                        {
-                            "label": "Cuxhaven",
-                            "value": 7
-                        },
-                        {
-                            "label": "Hannover",
-                            "value": 1
-                        },
-                        {
-                            "label": "Harburg",
-                            "value": 6
-                        },
-                        {
-                            "label": "Heidekreis",
-                            "value": 5
-                        },
-                        {
-                            "label": "Lüneburg",
-                            "value": 7
-                        },
-                        {
-                            "label": "Nienburg",
-                            "value": 10
-                        },
-                        {
-                            "label": "Osterholz",
-                            "value": 3
-                        },
-                        {
-                            "label": "Rotenburg",
-                            "value": 6
-                        },
-                        {
-                            "label": "Schaumburg",
-                            "value": 6
-                        },
-                        {
-                            "label": "Stade",
-                            "value": 5
-                        },
-                        {
-                            "label": "Uelzen",
-                            "value": 2
-                        },
-                        {
-                            "label": "Verden",
-                            "value": 5
-                        },
-                        {
-                            "label": "Lüchow-Dannenberg",
-                            "value": 2
-                        },
-                        {
-                            "label": "Rotenburg",
-                            "value": 2
-                        },
-                        {
-                            "label": "Unbekannt",
-                            "value": 1
-                        },
-                        {
-                            "label": "Osterholz-Scharmbeck",
-                            "value": 1
-                        }
-                    ]
-                },
-                {
-                    "label": "Region Süd",
-                    "groups": [
-                        {
-                            "label": "Braunschweig",
-                            "value": 9
-                        },
-                        {
-                            "label": "Gifhorn",
-                            "value": 1
-                        },
-                        {
-                            "label": "Göttingen",
-                            "value": 8
-                        },
-                        {
-                            "label": "Hameln",
-                            "value": 1
-                        },
-                        {
-                            "label": "Hannover",
-                            "value": 19
-                        },
-                        {
-                            "label": "Hildesheim",
-                            "value": 11
-                        },
-                        {
-                            "label": "Northeim",
-                            "value": 1
-                        },
-                        {
-                            "label": "Peine",
-                            "value": 1
-                        },
-                        {
-                            "label": "Wolfenbüttel",
-                            "value": 3
-                        }
-                    ]
-                }
+  {
+    "year": 2022,
+    "attacks": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Angriffe",
+              "value": 180
+            }
+          ]
+        },
+        {
+          "label": "Tatmotive",
+          "groups": [
+            {
+              "label": "Gegen Nichtrechte und Alternative",
+              "value": 9
+            },
+            {
+              "label": "Antisemitismus und Mysogenie",
+              "value": 3
+            },
+            {
+              "label": "Ukraine-Krieg",
+              "value": 3
+            },
+            {
+              "label": "LGBTQIA-Feindlichkeit",
+              "value": 5
+            },
+            {
+              "label": "Verschwörungstheorien",
+              "value": 24
+            },
+            {
+              "label": "Unklar",
+              "value": 4
+            },
+            {
+              "label": "Sozialdarwinismus",
+              "value": 4
+            },
+            {
+              "label": "Rassismus",
+              "value": 69
+            },
+            {
+              "label": "Politische Gegner*innen",
+              "value": 50
+            },
+            {
+              "label": "Neonazismus",
+              "value": 4
+            },
+            {
+              "label": "Antislawismus",
+              "value": 3
+            },
+            {
+              "label": "Antisemitismus",
+              "value": 9
+            }
+          ]
+        },
+        {
+          "label": "Delikte",
+          "groups": [
+            {
+              "label": "Nötigung/ Bedrohnung",
+              "value": 68
+            },
+            {
+              "label": "Beleidigung",
+              "value": 37
+            },
+            {
+              "label": "Sachbeschädigung",
+              "value": 21
+            },
+            {
+              "label": "Massive Sachbeschädigung",
+              "value": 3
+            },
+            {
+              "label": "Racial Profiling",
+              "value": 4
+            },
+            {
+              "label": "Volksverhetzung",
+              "value": 10
+            },
+            {
+              "label": "Körperverletzung (inkl. Versuche)",
+              "value": 20
+            },
+            {
+              "label": "Gefährliche Körperverletzung (inkl. Versuche)",
+              "value": 12
+            },
+            {
+              "label": "Schwere Körperverletzung",
+              "value": 1
+            },
+            {
+              "label": "Sonstige Delikte",
+              "value": 45
+            }
+          ]
+        },
+        {
+          "label": "Region Nordwest",
+          "groups": [
+            {
+              "label": "Ammerland",
+              "value": 1
+            },
+            {
+              "label": "Aurich",
+              "value": 3
+            },
+            {
+              "label": "Delmenhorst",
+              "value": 1
+            },
+            {
+              "label": "Diepholz",
+              "value": 3
+            },
+            {
+              "label": "Lingen",
+              "value": 1
+            },
+            {
+              "label": "Oldenburg",
+              "value": 13
+            },
+            {
+              "label": "Osnabrück",
+              "value": 20
+            },
+            {
+              "label": "Wilhelmshaven",
+              "value": 2
+            },
+            {
+              "label": "Wittmund",
+              "value": 2
+            },
+            {
+              "label": "Friesland",
+              "value": 1
+            },
+            {
+              "label": "Leer",
+              "value": 2
+            },
+            {
+              "label": "Grafschaft Bentheim",
+              "value": 1
+            }
+         ]
+        },
+        { 
+          "label": "Region Nordost",
+          "groups": [
+            {
+              "label": "Celle",
+              "value": 7
+            },
+            {
+              "label": "Cuxhaven",
+              "value": 7
+            },
+            {
+              "label": "Hannover",
+              "value": 1
+            },
+            {
+              "label": "Harburg",
+              "value": 6
+            },
+            {
+              "label": "Heidekreis",
+              "value": 5
+            },
+            {
+              "label": "Lüneburg",
+              "value": 7
+            },
+            {
+              "label": "Nienburg",
+              "value": 10
+            },
+            {
+              "label": "Osterholz",
+              "value": 3
+            },
+            {
+              "label": "Rotenburg",
+              "value": 6
+            },
+            {
+              "label": "Schaumburg",
+              "value": 6
+            },
+            {
+              "label": "Stade",
+              "value": 5
+            },
+            {
+              "label": "Uelzen",
+              "value": 2
+            },
+            {
+              "label": "Verden",
+              "value": 5
+            },
+            {
+              "label": "Lüchow-Dannenberg",
+              "value": 2
+            },
+            {
+              "label": "Rotenburg",
+              "value": 2
+            },
+            {
+              "label": "Unbekannt",
+              "value": 1
+            },
+            {
+              "label": "Osterholz-Scharmbeck",
+              "value": 1
+            }
             ]
+         },
+        {
+          "label": "Region Süd",
+          "groups": [
+            {
+              "label": "Braunschweig",
+              "value": 9
+            },
+            {
+              "label": "Gifhorn",
+              "value": 1
+            },
+            {
+              "label": "Göttingen",
+              "value": 8
+            },
+            {
+              "label": "Hameln",
+              "value": 1
+            },
+            {
+              "label": "Hannover",
+              "value": 19
+            },
+            {
+              "label": "Hildesheim",
+              "value": 11
+            },
+            {
+              "label": "Northeim",
+              "value": 1
+            },
+            {
+              "label": "Peine",
+              "value": 1
+            },
+            {
+              "label": "Wolfenbüttel",
+              "value": 3
+            }
+                  ]
         }
+      ]
     }
+  },
+  {
+    "year": 2021,
+    "attacks": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Angriffe",
+              "value": 217
+            }
+          ]
+        },
+        {
+          "label": "Region Nordwest",
+          "heading": "42 Angriffe in Region Nordwest",
+          "groups": [
+            {
+              "label": "Delmenhorst",
+              "value": 3
+            },
+            {
+              "label": "Diepholz",
+              "value": 2
+            },
+            {
+              "label": "Emden",
+              "value": 1
+            },
+            {
+              "label": "Emsland",
+              "value": 5
+            },
+            {
+              "label": "Jever",
+              "value": 1
+            },
+            {
+              "label": "Landkreis Aurich",
+              "value": 1
+            },
+            {
+              "label": "Landkreis Oldenburg",
+              "value": 2
+            },
+            {
+              "label": "Landkreis Osnabrück",
+              "value": 3
+            },
+            {
+              "label": "Oldenburg",
+              "value": 6
+            },
+            {
+              "label": "Osnabrück",
+              "value": 10
+            },
+            {
+              "label": "Vechta",
+              "value": 3
+            },
+            {
+              "label": "Wildeshausen",
+              "value": 1
+            },
+            {
+              "label": "Wilhelmshaven",
+              "value": 1
+            },
+            {
+              "label": "Wittmund",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "label": "Region Nordost",
+          "heading": "95 Angriffe in Region Nordost",
+          "groups": [
+            {
+              "label": "Nienburg",
+              "value": 1
+            },
+            {
+              "label": "Buxtehude",
+              "value": 1
+            },
+            {
+              "label": "Celle",
+              "value": 9
+            },
+            {
+              "label": "Cuxhaven",
+              "value": 5
+            },
+            {
+              "label": "Harburg",
+              "value": 11
+            },
+            {
+              "label": "Harsefeld",
+              "value": 1
+            },
+            {
+              "label": "Heidekreis",
+              "value": 2
+            },
+            {
+              "label": "Lüchow",
+              "value": 4
+            },
+            {
+              "label": "Lüneburg",
+              "value": 6
+            },
+            {
+              "label": "Nienburg",
+              "value": 14
+            },
+            {
+              "label": "Osterholz",
+              "value": 3
+            },
+            {
+              "label": "Peine",
+              "value": 1
+            },
+            {
+              "label": "Rotenburg",
+              "value": 11
+            },
+            {
+              "label": "Schaumburg",
+              "value": 4
+            },
+            {
+              "label": "Stade",
+              "value": 13
+            },
+            {
+              "label": "Uelzen",
+              "value": 3
+            },
+            {
+              "label": "Verden",
+              "value": 4
+            },
+            {
+              "label": "Wilhelmshaven",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "label": "Region Süd",
+          "heading": "78 Angriffe in Region Süd",
+          "groups": [
+            {
+              "label": "Braunschweig",
+              "value": 21
+            },
+            {
+              "label": "Göttingen",
+              "value": 5
+            },
+            {
+              "label": "Hameln",
+              "value": 2
+            },
+            {
+              "label": "Hannover",
+              "value": 20
+            },
+            {
+              "label": "Hildesheim",
+              "value": 20
+            },
+            {
+              "label": "Northeim",
+              "value": 1
+            },
+            {
+              "label": "Peine",
+              "value": 2
+            },
+            {
+              "label": "Salzgitter",
+              "value": 2
+            },
+            {
+              "label": "unbekannt",
+              "value": 1
+            },
+            {
+              "label": "Wolfenbüttel",
+              "value": 2
+            },
+            {
+              "label": "Wolfsburg",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "label": "Delikte",
+          "groups": [
+            {
+              "label": "Bedrohung",
+              "value": 57
+            },
+            {
+              "label": "Beleidigung",
+              "value": 59
+            },
+            {
+              "label": "Brandstiftung",
+              "value": 10
+            },
+            {
+              "label": "Gefährliche Körperverletzung",
+              "value": 14,
+              "info": "inkl. Versuche"
+            },
+            {
+              "label": "Körperverletzung",
+              "value": 36
+            },
+            {
+              "label": "Mord",
+              "value": 1
+            },
+            {
+              "label": "Racial Profiling",
+              "value": 5
+            },
+            {
+              "label": "Sachbeschädigung",
+              "value": 40
+            },
+            {
+              "label": "Schwere Körperverletzung",
+              "value": 4
+            },
+            {
+              "label": "Sonstiges",
+              "value": 14
+            },
+            {
+              "label": "Versuchte Tötungsdelikte",
+              "value": 4
+            },
+            {
+              "label": "Volksverhetzung",
+              "value": 8
+            }
+          ]
+        },
+        {
+          "label": "Motive",
+          "groups": [
+            {
+              "label": "Rassismus",
+              "value": 94
+            },
+            {
+              "label": "Politische Gegner*innen",
+              "value": 41
+            },
+            {
+              "label": "Sozialdarwinismus",
+              "value": 1
+            },
+            {
+              "label": "Verschwörungsideologie",
+              "value": 51
+            },
+            {
+              "label": "LQBTQ-Feindlichkeit",
+              "value": 6
+            },
+            {
+              "label": "Antisemitismus",
+              "value": 16
+            },
+            {
+              "label": "Neonazismus",
+              "value": 8
+            }
+          ]
+        }
+      ]
+    },
+    "victims": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Betroffene",
+              "value": 246
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "year": "2020/2",
+    "attacks": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Angriffe",
+              "value": 63
+            }
+          ]
+        },
+        {
+          "label": "Regionen",
+          "groups": [
+            {
+              "label": "Nordwest",
+              "value": 18
+            },
+            {
+              "label": "Nordost",
+              "value": 13
+            },
+            {
+              "label": "Süd",
+              "value": 28
+            }
+          ]
+        },
+        {
+          "label": "Delikte",
+          "groups": [
+            {
+              "label": "Tötung",
+              "value": 2
+            },
+            {
+              "label": "Brandstiftung",
+              "value": 4
+            },
+            {
+              "label": "Gefährliche Körperverletzung",
+              "value": 4
+            },
+            {
+              "label": "Einfache Körperverletzung",
+              "value": 11
+            },
+            {
+              "label": "Nötigung & Bedrohung",
+              "value": 24
+            },
+            {
+              "label": "Beleidigung",
+              "value": 26
+            },
+            {
+              "label": "Sachbeschädigung",
+              "value": 9
+            },
+            {
+              "label": "Sonstige Gewalttaten",
+              "value": 23
+            }
+          ]
+        },
+        {
+          "label": "Motive",
+          "groups": [
+            {
+              "label": "Rassismus",
+              "value": 42
+            },
+            {
+              "label": "Politische Gegner*innen",
+              "value": 9
+            },
+            {
+              "label": "Nicht Rechte / Alternative",
+              "value": 5
+            },
+            {
+              "label": "Verschwörungsideologie",
+              "value": 4
+            },
+            {
+              "label": "Antisemitismus",
+              "value": 2
+            },
+            {
+              "label": "Gegen LQBTQ+",
+              "value": 1
+            },
+            {
+              "label": "Sonstige",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    "victims": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Betroffene",
+              "value": 123
+            }
+          ]
+        }
+      ]
+    }
+  }
 ]

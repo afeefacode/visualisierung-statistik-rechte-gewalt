@@ -163,7 +163,7 @@
             }
          ]
         },
-        { 
+        {
           "label": "Region Nordost",
           "groups": [
             {
@@ -276,6 +276,19 @@
               "value": 3
             }
                   ]
+        }
+      ]
+    },
+    "victims": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Betroffene",
+              "value": 231
+            }
+          ]
         }
       ]
     }

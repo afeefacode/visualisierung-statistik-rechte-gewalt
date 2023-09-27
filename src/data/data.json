@@ -1,5 +1,239 @@
 [
   {
+    "year": "2023/1",
+    "attacks": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Angriffe",
+              "value": 55
+            }
+          ]
+        },
+        {
+          "label": "Tatmotive",
+          "groups": [
+            {
+              "label": "Unklar",
+              "value": 2
+            },
+            {
+              "label": "Sozialdarwinismus",
+              "value": 2
+            },
+            {
+              "label": "Rassismus",
+              "value": 25
+            },
+            {
+              "label": "Politische Gegner*innen",
+              "value": 15
+            },
+            {
+              "label": "Gegen Nichtrechte und Alternative",
+              "value": 1
+            },
+            {
+              "label": "LGBTQIA-Feindlichkeit",
+              "value": 6
+            },
+            {
+              "label": "Antislawismus",
+              "value": 2
+            },
+            {
+              "label": "Antisemitismus",
+              "value": 1
+            },
+            {
+              "label": "Antifeminismus und Mysogenie",
+              "value": 1
+            }
+         ]
+        },
+        {
+          "label": "Delikte",
+          "groups": [
+            {
+              "label": "Gefährliche Körperverletzung (inkl. Versuche)",
+              "value": 5
+            },
+            {
+              "label": "Körperverletzung (inkl. Versuche)",
+              "value": 10
+            },
+            {
+              "label": "Beleidigung",
+              "value": 10
+            },
+            {
+              "label": "Massive Sachbeschädigung",
+              "value": 1
+            },
+            {
+              "label": "Nötigung/ Bedrohnung",
+              "value": 29
+            },
+            {
+              "label": "Sachbeschädigung",
+              "value": 2
+            },
+            {
+              "label": "Schwere Körperverletzung",
+              "value": 1
+            },
+            {
+              "label": "Sonstige Delikte",
+              "value": 12
+            },
+            {
+              "label": "Versuchte Tötung",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "label": "Region Nordwest",
+          "groups": [
+            {
+              "label": "Aurich",
+              "value": 2
+            },
+            {
+              "label": "Diepholz",
+              "value": 2
+            },
+            {
+              "label": "Emsland",
+              "value": 1
+            },
+            {
+              "label": "Friesland",
+              "value": 2
+            },
+            {
+              "label": "Leer",
+              "value": 1
+            },
+            {
+              "label": "Oldenburg",
+              "value": 3
+            },
+            {
+              "label": "Osnabrück (Land)",
+              "value": 1
+            },
+            {
+              "label": "Osnabrück (Stadt)",
+              "value": 3
+            },
+            {
+              "label": "Vechta",
+              "value": 1
+            },
+            {
+              "label": "Wesermarsch",
+              "value": 1
+            },
+            {
+              "label": "Wilhelmshaven",
+              "value": 1
+            }
+         ]
+        },
+        {
+          "label": "Region Nordost",
+          "groups": [
+            {
+              "label": "Celle",
+              "value": 2
+            },
+            {
+              "label": "Cuxhaven",
+              "value": 3
+            },
+            {
+              "label": "Harburg",
+              "value": 1
+            },
+            {
+              "label": "Heidekreis",
+              "value": 1
+            },
+            {
+              "label": "Nienburg",
+              "value": 5
+            },
+            {
+              "label": "Osterholz",
+              "value": 1
+            },
+            {
+              "label": "Rotenburg",
+              "value": 2
+            },
+            {
+              "label": "Schaumburg",
+              "value": 3
+            },
+            {
+              "label": "Stade",
+              "value": 1
+            },
+            {
+              "label": "Uelzen",
+              "value": 1
+            },
+            {
+              "label": "Unbekannt",
+              "value": 1
+            }
+            ]
+         },
+        {
+          "label": "Region Süd",
+          "groups": [
+            {
+              "label": "Braunschweig",
+              "value": 4
+            },
+            {
+              "label": "Hannover",
+              "value": 6
+            },
+            {
+              "label": "Hildesheim",
+              "value": 3
+            },
+            {
+              "label": "Peine",
+              "value": 1
+            },
+            {
+              "label": "Wolfenbüttel",
+              "value": 2
+            }
+                  ]
+        }
+      ]
+    },
+    "victims": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Betroffene",
+              "value": 85
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "year": 2022,
     "attacks": {
       "groupings": [
@@ -20,7 +254,7 @@
               "value": 9
             },
             {
-              "label": "Antisemitismus und Mysogenie",
+              "label": "Antifeminismus und Mysogenie",
               "value": 3
             },
             {

@@ -1,5 +1,191 @@
 [
   {
+    "year": "2023/2",
+    "attacks": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Angriffe",
+              "value": 38
+            }
+          ]
+        },
+        {
+          "label": "Tatmotive",
+          "groups": [
+            {
+              "label": "Unklar",
+              "value": 1
+            },
+            {
+              "label": "Rassismus",
+              "value": 16
+            },
+            {
+              "label": "Politische Gegner*innen",
+              "value": 9
+            },
+            {
+              "label": "Gegen Nichtrechte und Alternative",
+              "value": 3
+            },
+            {
+              "label": "LGBTQIA-Feindlichkeit",
+              "value": 4
+            },
+            {
+              "label": "Antislawismus",
+              "value": 1
+            },
+            {
+              "label": "Antisemitismus",
+              "value": 2
+            },
+            {
+              "label": "Antifeminismus und Mysogenie",
+              "value": 1
+            }
+         ]
+        },
+        {
+          "label": "Delikte",
+          "groups": [
+            {
+              "label": "Massive Sachbeschädigung",
+              "value": 3
+            },
+            {
+              "label": "Gefährliche Körperverletzung (inkl. Versuche)",
+              "value": 5
+            },
+            {
+              "label": "Körperverletzung (inkl. Versuche)",
+              "value": 11
+            },
+            {
+              "label": "Brandstiftung",
+              "value": 1
+            },
+            {
+              "label": "Nötigung/ Bedrohnung",
+              "value": 18
+            },
+            {
+              "label": "Sonstige Delikte",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "label": "Region Nordwest",
+          "groups": [
+            {
+              "label": "Aurich",
+              "value": 1
+            },
+            {
+              "label": "Diepholz",
+              "value": 3
+            },
+            {
+              "label": "Leer",
+              "value": 1
+            },
+            {
+              "label": "Oldenburg (Land)",
+              "value": 2
+            },
+            {
+              "label": "Osnabrück (Stadt)",
+              "value": 6
+            },
+            {
+              "label": "Vechta",
+              "value": 1
+            },
+            {
+              "label": "Wilhelmshaven",
+              "value": 1
+            }
+         ]
+        },
+        {
+          "label": "Region Nordost",
+          "groups": [
+            {
+              "label": "Celle",
+              "value": 2
+            },
+            {
+              "label": "Harburg",
+              "value": 2
+            },
+            {
+              "label": "Lüneburg",
+              "value": 3
+            },
+            {
+              "label": "Nienburg (Weser)",
+              "value": 2
+            }
+          ]
+         },
+        {
+          "label": "Region Süd",
+          "groups": [
+            {
+              "label": "Braunschweig",
+              "value": 2
+            },
+            {
+              "label": "Gifhorn",
+              "value": 1
+            },
+            {
+              "label": "Göttingen",
+              "value": 2
+            },
+            {
+              "label": "Hannover",
+              "value": 4
+            },
+            {
+              "label": "Hildesheim",
+              "value": 2
+            },
+            {
+              "label": "Holzminden",
+              "value": 1
+            },
+            {
+              "label": "Salzgitter",
+              "value": 1
+            },
+            {
+              "label": "Wolfenbüttel",
+              "value": 1
+            }
+                  ]
+        }
+      ]
+    },
+    "victims": {
+      "groupings": [
+        {
+          "label": "Gesamt",
+          "groups": [
+            {
+              "label": "Betroffene",
+              "value": 60
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "year": "2023/1",
     "attacks": {
       "groupings": [
